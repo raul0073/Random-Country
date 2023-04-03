@@ -1,0 +1,132 @@
+:root{
+    --clr-greenAction: rgb(112, 202, 28);
+    --clr-darkgreen: #295318;
+    --clr-grey: #707070b6;
+  } 
+  
+  body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Tahoma";
+    background-color: black;
+  
+  }
+   .container {
+    position: relative;
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+   }
+  // contact setion
+  .container.settings,
+  .container.contact,
+  .container.rules{
+    background-color: #8d8d8d;
+    position: relative;
+    width: 530px;
+    height: 100vh;
+    display: block;
+    margin: -4rem auto;
+    border-radius: .3rem;
+    margin-bottom: 2rem;
+
+    .header.settings{
+        padding: 1rem 0;
+        font-size: 1.5rem;
+        color: white;
+        text-align: center;
+        letter-spacing: .2em;
+        text-decoration: underline;
+    }
+
+    .text.settings{
+        padding: 1rem 1.5rem;
+        text-align: left;
+    }
+
+
+    .btn-contact{
+        border: 1px solid var(--clr-greenAction);
+        outline: none;
+        font-size: 1rem;
+        background-color: transparent;
+        padding: .4rem 1rem;
+        color: white;
+        border-radius: .2rem;
+        cursor: pointer;
+    
+        &:hover{
+          background-color: var(--clr-greenAction);
+        }
+      }}
+
+
+
+// content
+.settings-content,
+.rules-content,
+.contact-content{
+  display: none;
+  padding: 1rem 1rem;
+
+  h2{
+    color:#ffffff;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    display: none;
+  }
+  h3{
+    color:#444444;
+    font-weight: 100;
+    font-size: 1rem;
+  }
+  form{
+    display: none;
+    text-align: left;
+
+    label{
+      color:#181717;
+    }
+    input[type="radio"]{
+      fill:rgb(112, 202, 28);
+    }
+  }
+
+  .btn-holder{
+    text-align: center;
+  }
+  .btn-pop-window{
+    margin: 2rem 1rem;
+    color:#ffffff;
+    padding: 1rem;
+    border-radius: 5%;
+    background-color: transparent;
+    border: 1px solid var(--clr-greenAction);
+    cursor: pointer;
+
+    &.close{
+      border: 1px solid rgba(0, 0, 0, 0.685);
+      &:hover{
+        background-color: rgba(0, 0, 0, 0.685);
+      }
+    }
+
+    &.send{
+      &:hover{
+        background-color: var(--clr-greenAction);
+      }
+    }
+  }
+  .rulesImg{
+    border: 1px solid whitesmoke;
+    border-radius: .3rem;
+    width:490px !important;
+  }
+  .explantion{
+    font-size: .9rem;
+
+  }
+}

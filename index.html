@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- css -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/nav/scss/nav.css">
+  <!-- js -->
+  <script type="module" src="/main.js"></script>
+  <script type="module" src="/js/autocomplete.js"></script>
+  <script type="module" src="/js/nums.js"></script>
+  <script type="module" src="/js/random.js"></script>
+  <script type="module" src="/js/api.js"></script>
+  <script type="module" src="/js/direction.js"></script>
+  <script type="module" src="/nav/nav.js"></script>
+  <script type="module" src="/js/hints.js"></script>
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Guess the Country</title>
+</head>
+<body>
+    <!---- nav bar ----->
+  <nav>
+    <div class="nav">
+      <ul type="none">
+        <li>
+          <a href="#" id="settings" class="tabItem"><i class="fa fa-cog"></i></a>
+        </li>
+        <li>
+          <a href="#" id="rules" class="tabItem"><i class="fa fa-circle-info"></i></a>
+        </li>
+        <li>
+          <a href="#" id="contact" class="tabItem"><i class="fa fa-envelope"></i></a>
+        </li>
+        <li>
+          <a href="#" id="home" class="tabItem"><i class="fa fa-home"></i></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+    <!---- nav bar ENDS ----->
+  <main>
+  <!-- parent container -->
+    <div class="container">
+      <!--- nav bar popups content-->
+      <div class="settings-content">
+        <h2>Settings</h2>
+        <form>
+          <h3>UNITS</h3>
+          <input type="radio" name="units" id="kmUnits" selected="true">
+          <label for="km">Kilometer</label><br>
+          <input type="radio" name="units" id="mlUnits">
+          <label for="mi">Miles</label>
+          
+          <hr>
+          <h3>GRAPHICS</h3>
+          <input type="radio" name="colors" id="regularColor" selected="true">
+          <label for="reg">Regular</label><br>
+          <input type="radio" name="colors" id="blindColor" >
+          <label for="blind">Color Blind</label>
+          
+          <hr>
+          <h3>GAMEPLAY</h3>
+          <input type="radio" name="flag" id="regularFlag" selected="true">
+          <label for="flag">No flag</label><br>
+          <input type="radio" name="flag" id="showFlag">
+          <label for="reg">Show me the flag</label>
+          <hr>
+          <br>
+          <div class="btn-holder">
+            <button type="submit" class="btn-pop-window send">Save</button>
+            <button type="close" class="btn-pop-window close"  id="btn-close-settings">Close</button>
+          </div>
+          
+        </form>
+      </div>
+      <div class="rules-content">
+        <h2>Rules</h2>
+        <form>
+          <h3>Follow the explantion below for each indicator</h3>
+          <img src="./images/cluesExBR.png" class="rulesImg" alt="gameplay example1"><br>
+          <lablel class="explantion"><strong>1. Country Name: </strong> The country you searched for last.</lablel><br><br>
+          <lablel class="explantion"><strong>2. Country Population: </strong>The population of the country you searched for last. The arrow will signle if the country you are looking for has a higher or lower number of population<br><br>
+          <lablel class="explantion"><strong>3. Country Name Acknowledge:</strong> **The year in which the country you searched for last has been recognized by name and teritory** (data has been proveded by wikipedia). The arrow will signle if the country you are looking for is more recent or not<br><br>
+          <lablel class="explantion"><strong>4. Country Area Size: </strong>The area size of the country you searched for last. the arrow will provide indication to if the country you are looking for is bigger or smaller<br><br>
+          <lablel class="explantion"><strong>5. Direction: </strong>Direction from the <strong>CENTER</strong> of the country you searched for last to the CENTER of the country you are looking for<br><br>
+          <lablel class="explantion"><strong>6. Subregion: </strong>Indication to whether or not the country you searched for last is in the <strong>same</strong> subregion as the country you are looking for. A green color will be added to sub-region if is correct<br><br>
+          <img src="./images/cluesEx3.png" class="rulesImg" alt="gameplay example2">
+          <div class="btn-holder">
+            <button type="close"class="btn-pop-window close"  id="btn-close-rules">Close</button>
+          </div>
+
+        </form>
+      </div>
+      <div class="contact-content">
+        <h2>Contact Us</h2>
+          <h3>Please note we could not care less</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam ipsum repellendus iste sit deserunt culpa voluptas ea ut, omnis, voluptates, nobis harum suscipit quos velit non! Maiores, molestias voluptate! Facilis distinctio deserunt, sint enim sunt iusto amet labore ratione ex repellat adipisci quia. Nemo, quis! Magni repudiandae, doloribus molestias inventore numquam, quibusdam corporis labore tempore illum doloremque incidunt minus fuga.</p>
+          <div class="btn-holder">
+            <button type="submit" class="btn-pop-window send">Send</button>
+            <button type="close" class="btn-pop-window close" id="btn-close-contact">Close</button>
+          </div>
+      </div>
+    <!--- nav bar popups content ENDS-->
+
+      <!-- homepage content -->
+        <!---- flag ----->
+      <div class="container-flag">
+        <div class="clues-btns">
+          <h2 class="title-sidebar">Take a hint?</h2>
+          <button class="hint-flag"></button>
+          <button class="hint-size"></button>
+        </div>
+        <h2 class="country-name"></h2>
+        <img src="#" class="country-flag">
+          <!---- feedback ----->
+        <h3 class="feedback"></h3>
+      </div>
+        <!---- feedback square ----->
+      <div class="container-clues-feed"></div>
+        <!---- search ----->
+      <div class="container-search">
+        <input type="text" class='fa' placeholder="&#xf124  Search for a country" id="userinput" style="font-family:Tahoma, FontAwesome"/>  
+        <button class="btn-search" style="font-family:Tahoma, FontAwesome" >&#xF002; </button>
+      </div>
+        <!---- autocomplete ----->
+      <div id="suggestions-container"></div>
+      </div>
+      <!-- injected script -->
+      <div class="script-div">
+      </div>
+    </div>
+  </main>
+</body>
+</html>

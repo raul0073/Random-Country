@@ -1,0 +1,149 @@
+:root {
+  --clr-greenAction: rgb(112, 202, 28);
+  --clr-darkgreen: #295318;
+  --clr-grey: #707070b6;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Tahoma";
+  background-color: black;
+}
+
+.container {
+  position: relative;
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
+}
+
+.container.settings,
+.container.contact,
+.container.rules {
+  background-color: #8d8d8d;
+  position: relative;
+  width: 530px;
+  height: 100vh;
+  display: block;
+  margin: -4rem auto;
+  border-radius: 0.3rem;
+  margin-bottom: 2rem;
+}
+.container.settings .header.settings,
+.container.contact .header.settings,
+.container.rules .header.settings {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-decoration: underline;
+}
+.container.settings .text.settings,
+.container.contact .text.settings,
+.container.rules .text.settings {
+  padding: 1rem 1.5rem;
+  text-align: left;
+}
+.container.settings .btn-contact,
+.container.contact .btn-contact,
+.container.rules .btn-contact {
+  border: 1px solid var(--clr-greenAction);
+  outline: none;
+  font-size: 1rem;
+  background-color: transparent;
+  padding: 0.4rem 1rem;
+  color: white;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+.container.settings .btn-contact:hover,
+.container.contact .btn-contact:hover,
+.container.rules .btn-contact:hover {
+  background-color: var(--clr-greenAction);
+}
+
+.settings-content,
+.rules-content,
+.contact-content {
+  display: none;
+  padding: 1rem 1rem;
+}
+.settings-content h2,
+.rules-content h2,
+.contact-content h2 {
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  display: none;
+}
+.settings-content h3,
+.rules-content h3,
+.contact-content h3 {
+  color: #444444;
+  font-weight: 100;
+  font-size: 1rem;
+}
+.settings-content form,
+.rules-content form,
+.contact-content form {
+  display: none;
+  text-align: left;
+}
+.settings-content form label,
+.rules-content form label,
+.contact-content form label {
+  color: #181717;
+}
+.settings-content form input[type=radio],
+.rules-content form input[type=radio],
+.contact-content form input[type=radio] {
+  fill: rgb(112, 202, 28);
+}
+.settings-content .btn-holder,
+.rules-content .btn-holder,
+.contact-content .btn-holder {
+  text-align: center;
+}
+.settings-content .btn-pop-window,
+.rules-content .btn-pop-window,
+.contact-content .btn-pop-window {
+  margin: 1rem 1rem;
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 5%;
+  background-color: transparent;
+  border: 1px solid var(--clr-greenAction);
+  cursor: pointer;
+}
+.settings-content .btn-pop-window.close,
+.rules-content .btn-pop-window.close,
+.contact-content .btn-pop-window.close {
+  border: 1px solid rgba(0, 0, 0, 0.685);
+}
+.settings-content .btn-pop-window.close:hover,
+.rules-content .btn-pop-window.close:hover,
+.contact-content .btn-pop-window.close:hover {
+  background-color: rgba(0, 0, 0, 0.685);
+}
+.settings-content .btn-pop-window.send:hover,
+.rules-content .btn-pop-window.send:hover,
+.contact-content .btn-pop-window.send:hover {
+  background-color: var(--clr-greenAction);
+}
+.settings-content .rulesImg,
+.rules-content .rulesImg,
+.contact-content .rulesImg {
+  border: 1px solid whitesmoke;
+  border-radius: 0.3rem;
+  width: 490px !important;
+}
+.settings-content .explantion,
+.rules-content .explantion,
+.contact-content .explantion {
+  font-size: 0.9rem;
+}/*# sourceMappingURL=nav.css.map */
